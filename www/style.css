@@ -1,0 +1,183 @@
+
+// to delete
+
+.table-wrap {
+  box-shadow: 2px 3px 20px black;
+  font-size: 16px;
+  background-color: #fafafa;
+  font-family: Fira Sans Condensed;
+  color: #1a1a1a;
+  padding: 20px 20px 20px 20px;  
+}
+.table-title {
+  font-size: 40px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.table-cap {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #696565
+  font-weight: 100;
+}
+.table-cap1 {
+  font-size: 15px;
+  color: #696565
+  font-weight: 100;
+}
+
+//to delete
+
+
+}
+
+element.style {
+    left: 10px;
+}
+
+.well {
+    display: block;
+    background-color: #466060;
+    color: white;
+    padding: 1.25rem;
+    border-radius: .60rem
+}
+
+.dropdown-menu>li.active>a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5a6987;
+}
+
+.btn-light {
+    color: #000;
+    background-color: #ffffff;
+    border-color: #ccc;
+}
+
+.btn-light:hover {
+    color: #000;
+    background-color: #ffffff;
+    border-color: #b3b3b3
+}
+
+@media (max-width: 576px) {  
+  .navbar-header {
+    width: 100% !important;
+  }
+  .navbar-toggle {
+      float: right !important;
+  }
+}
+
+.pull-right {
+  float: right !important;
+}
+
+// Base class
+.panel {
+  margin-bottom: $line-height-computed;
+  background-color: $panel-bg;
+  border: 1px solid;
+  border-radius: $panel-border-radius;
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, .05));
+}
+
+// Panel contents
+.panel-body {
+  padding: $panel-body-padding;
+  @include clearfix;
+}
+
+// Optional heading
+.panel-heading {
+  padding: $panel-heading-padding;
+  border-bottom: 1px solid transparent;
+  @include border-top-radius(($panel-border-radius - 1));
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: ceil(($font-size-base * 1.125));
+  color: inherit;
+
+  > a,
+  > small,
+  > .small,
+  > small > a,
+  > .small > a {
+    color: inherit;
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  padding: $panel-footer-padding;
+  background-color: $panel-footer-bg;
+  border-top: 1px solid $panel-inner-border;
+  @include border-bottom-radius(($panel-border-radius - 1));
+}
+
+
+// List groups in panels
+//
+// By default, space out list group content from panel headings to account for
+// any kind of custom content between the two.
+
+.panel {
+  > .list-group,
+  > .panel-collapse > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border-width: 1px 0;
+      border-radius: 0;
+    }
+
+    // Add border top radius for first one
+    &:first-child {
+      .list-group-item:first-child {
+        border-top: 0;
+        @include border-top-radius(($panel-border-radius - 1));
+      }
+    }
+
+    // Add border bottom radius for last one
+    &:last-child {
+      .list-group-item:last-child {
+        border-bottom: 0.5px;
+        @include border-bottom-radius(($panel-border-radius - 1));
+      }
+    }
+  }
+  > .panel-heading + .panel-collapse > .list-group {
+    .list-group-item:first-child {
+      @include border-top-radius(0);
+    }
+  }
+}
+// Collapse space between when there's no additional content.
+.panel-heading + .list-group {
+  .list-group-item:first-child {
+    border-top-width: 0.5px;
+  }
+}
+.list-group + .panel-footer {
+  border-top-width: 0.5px;
+}
+
+.panel-body{
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 25px;
+  border: 1px solid rgba(28,53,22,0.125)
+}
