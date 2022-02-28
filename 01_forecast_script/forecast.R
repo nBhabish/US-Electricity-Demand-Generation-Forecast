@@ -17,19 +17,22 @@ load("00_raw_data/elec_df.rda")
 # Data Cleaning -----------------------------------------------------------
 
 ## Creating Daily DF ----
-elec_df_daily <- elec_df %>%
+elec_df_daily <- elec_df %>% 
   pad_by_time(
     .date_var = date_time,
     .by = "hour",
     .pad_value = NA,
     .fill_na_direction = "downup"
   ) %>%
-  group_by(type) %>%
+  group_by(type) %>% 
   summarise_by_time(.date_var = date_time,
                     .by = "day",
                     series = sum(series)) %>%
-  filter(date_time != (Sys.Date())) %>% 
-  ungroup()
+  ungroup() %>% 
+  mutate(date_time = ymd(date_time)) %>% 
+  filter(date_time != "2022-02-03")
+  
+
 
 
 ## Quick Visualization ----
